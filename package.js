@@ -14,6 +14,9 @@ Package.onUse(function(api) {
   api.versionsFrom('1.6.1');
   api.use('ecmascript');
   api.mainModule('accounts-role-manager-ui-react.js');
+  api.use([
+    "othermachines:accounts-role-manager@0.0.1"
+  ]);
 });
 
 Package.onTest(function(api) {

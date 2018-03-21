@@ -1,5 +1,18 @@
-// Write your package code here!
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-// Variables exported by this module can be imported by other packages and
-// applications. See accounts-role-manager-ui-react-tests.js for an example of importing.
-export const name = 'accounts-role-manager-ui-react';
+import Users from 'meteor/othermachines:accounts-role-manager';
+
+class AccountsRoleManagerUIReact extends Component {
+  constructor(props) {
+    super(props);
+    this.users = Users();
+  }
+  render() {
+    return (
+      <h1>AccountsRoleManagerUIReact ({this.users.count()})</h1>
+    );
+  }
+}
+
+export default AccountsRoleManagerUIReact;

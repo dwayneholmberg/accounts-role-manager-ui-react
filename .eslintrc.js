@@ -9,6 +9,8 @@ module.exports = {
     "meteor": true
   },
   "rules": {
-    "no-return-assign": ["error", "except-parens"]
+    "no-return-assign": ["error", "except-parens"],
+    "react/prefer-stateless-function": [0],
+    "import/no-unresolved": [ 2, { "ignore": ["^meteor/"] } ]
   },
 };
